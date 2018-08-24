@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.tonyrobbins.com	TRUE	/	FALSE	1999999999	PHPSESSID	lv3dko2f5k5u3ublftsdfanq67
+www.tonyrobbins.com	TRUE	/	FALSE	1999999999	visited_internal	1
+.tonyrobbins.com	TRUE	/	FALSE	1999999999	PHPSESSID	lv3dko2f5k5u3ublftsdfanq67
+

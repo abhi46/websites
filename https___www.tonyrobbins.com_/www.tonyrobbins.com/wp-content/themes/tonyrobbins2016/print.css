@@ -1,0 +1,22 @@
+body > nav.clearfix,
+body > #announcement,
+body > #mobile-menu,
+body > #hero-event,
+body > #tabs,
+body > .lead-magnet,
+body > #form,
+body > .opt-in-form,
+body > #footer-wrapper,
+body #breadcrumbs,
+body #about,
+body #stories,
+body #pricing,
+body #faq {
+  display: none !important;
+}
+
+body #event-info,
+body .collapse {
+  display: block !important;
+}
+

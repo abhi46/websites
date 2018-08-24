@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+17:10:07	81/81	U-----	200	untouched ('OK')	text/plain	etag:%2251-56306b1a6d51c%22	https://www.tonyrobbins.com/robots.txt		(from )
+17:10:08	151256/151256	U--MCZ	200	updated ('OK')	text/html	date:Wed,%2008%20Aug%202018%2011:40:08%20GMT	https://www.tonyrobbins.com/events/	C:/My%20Web%20Sites/events/index-2.html	(from )

@@ -1,0 +1,1098 @@
+<!doctype html>
+<html amp lang="en-US">
+
+<!-- Mirrored from www.tonyrobbins.com/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Aug 2018 11:39:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <link rel="dns-prefetch" href="https://cdn.ampproject.org/">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+					<meta name="amp-google-client-id-api" content="googleanalytics">
+					<link rel="canonical" href="../index.html">
+	<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="The official website of Tony Robbins" />
+<meta name="twitter:title" content="tonyrobbins.com" />
+<meta name="twitter:site" content="@tonyrobbins" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="tonyrobbins.com" />
+<meta property="og:description" content="The official website of Tony Robbins" />
+<meta property="og:url" content="https://www.tonyrobbins.com" />
+<meta property="og:site_name" content="tonyrobbins.com" />
+<meta property="fb:app_id" content="966242223397117" />
+		<script custom-element="amp-accordion" src="../../cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
+			<script custom-element="amp-lightbox" src="../../cdn.ampproject.org/v0/amp-lightbox-0.1.js" async></script>
+			<script custom-element="amp-form" src="../../cdn.ampproject.org/v0/amp-form-0.1.js" async></script>
+			<script custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js" async></script>
+			<script custom-element="amp-sidebar" src="../../cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+			<script custom-element="amp-carousel" src="../../cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+		<script src="../../cdn.ampproject.org/v0.js" async></script>
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<title>The Tony Robbins Blog Page 1</title>
+	<style amp-custom>
+	
+/*  Widgets styling */
+.amp-wp-content.widget-wrapper { margin: 20px 17px 17px 17px;}
+
+/* Global Styling */
+body{ font: 16px/1.4 Sans-serif; }
+a{ color: #312C7E; text-decoration: none }
+.clearfix, .cb{ clear: both }
+.alignleft{ margin-right: 12px; margin-bottom:5px; float: left; }
+.alignright{ float:right; margin-left: 12px; margin-bottom:5px; }
+.aligncenter{ text-align:center; margin: 0 auto }
+#statcounter{width: 1px;height:1px;}
+amp-anim { max-width: 100%; }
+.amp-wp-content amp-iframe{max-width:100%}
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src:  local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/robotoslab/RobotoSlab-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    src:  local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/robotoslab/RobotoSlab-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    src:  local('PT Serif'), local('PTSerif-Regular'), url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/ptserif/PT_Serif-Web-Regular.ttf');
+}
+@font-face {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    src:  local('PT Serif Bold'), local('PTSerif-Bold'), url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/ptserif/PT_Serif-Web-Bold.ttf');
+}
+
+/* Template Styles */
+.amp-wp-content, .amp-wp-title-bar div {
+        max-width: 1000px;
+    margin: 0 auto;
+    }
+
+/* Slide Navigation code */
+amp-sidebar{ width: 280px; background: #131313; font-family: 'Roboto Slab', serif; }
+.amp-sidebar-image{ line-height: 100px; vertical-align:middle; }
+.amp-close-image{ top: 15px; left: 225px; cursor: pointer; }
+.navigation_heading{ padding: 20px 20px 15px 20px; color: #aaa; font-size: 10px; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #555; display: inline-block; width: 100%}
+.toggle-navigationv2 ul{ list-style-type: none; margin: 15px 0 0 0; padding: 0}
+.toggle-navigationv2 ul li a{ padding: 10px 15px 10px 20px; display: inline-block; font-size: 14px; color:#eee; width:94% }
+.amp-menu li{position:relative}
+.toggle-navigationv2 ul li a:hover{background:#666;color:#fff}
+.amp-menu li.menu-item-has-children ul{display:none;margin:0;background:#222}
+.amp-menu li.menu-item-has-children ul ul{background:#444}
+.amp-menu li.menu-item-has-children ul ul ul{background:#666}
+.amp-menu li.menu-item-has-children:hover > ul{display:block}
+.amp-menu li.menu-item-has-children:after{content:'\25be';position:absolute;padding: 10px 15px 10px 30px;right:0;font-size:18px;color:#ccc;top:0;z-index:10000;line-height:1}
+.toggle-navigationv2 .social_icons{ margin-top: 25px; border-top: 1px solid #555; padding: 25px 0px; color: #fff; width: 100%; }
+.menu-all-pages-container:after{ content: ""; clear: both }
+.toggle-text{ color: #fff; font-size: 12px; text-transform: uppercase; letter-spacing: 3px; display: inherit; text-align: center; }
+.toggle-text:before{ content: "..."; font-size: 32px; position: ; font-family: georgia; line-height: 0px; margin-left: 0px; letter-spacing: 1px; top: -3px; position: relative; padding-right: 10px; }
+.toggle-navigation:hover, .toggle-navigation:active, .toggle-navigation:focus{ display: inline-block; width: 100%; }
+/* Pagination */
+.amp-wp-content.pagination-holder{ background: none; padding: 0; box-shadow: none; height: auto; min-height: auto; }
+#pagination{ width: 100%; margin-top: 20px; }
+#pagination .next, #pagination .prev{ margin: 0px 6% 10px 6%; }
+#pagination .next a, #pagination .prev a{ opacity:0.9; background: #f42f42; width: 100%; color: #fff; display: inline-block; text-align: center; font-size: 16px; line-height: 1; padding: 18px 0%; border-radius: 4px; }
+/*Sticky Head For Design 3*/
+#header{ background: #fff; text-align: center; height:50px; box-shadow:0 0 32px rgba(0,0,0,.15); }
+header{ padding-bottom:50px; }
+#headerwrap{ position: fixed; z-index:1000; width: 100%; top:0; }
+#header h1{ text-align: center; font-size: 16px; position: relative; font-weight: bold; line-height: 50px; padding: 0; margin: 0; text-transform: uppercase }
+main .amp-wp-content{ font-size: 18px; line-height: 29px; color:#111 }
+.single-post main .amp-wp-article-content h1{ font-size:2em}
+.single-post main .amp-wp-article-content h1, .single-post main .amp-wp-article-content h2, .single-post main .amp-wp-article-content h3, .single-post main .amp-wp-article-content h4, .single-post main .amp-wp-article-content h5, .single-post main .amp-wp-article-content h6{ font-family: 'Roboto Slab', serif; margin: 0px 0px 5px 0px; line-height: 1.6; }
+.home-post_image{ float: left; width:33%; padding-right: 2%; overflow:hidden; max-height: 225px }
+.amp-wp-title{ margin-top: 0px; }
+h2.amp-wp-title{ font-family: 'Roboto Slab', serif; font-weight: 700; font-size: 20px; margin-bottom: 7px; line-height: 1.3; }
+h2.amp-wp-title a{ color: #000; }
+.amp-wp-tags{ list-style-type: none; padding: 0; margin: 0 0 9px 0; display: inline-flex; }
+.amp-wp-tags li{ display: inline; background: #F6F6F6; color: #9e9e9e; line-height: 1; border-radius: 50px; padding: 8px 18px; font-size: 12px; margin-right: 8px; top: -3px; position: relative; }
+.amp-wp-tags li a{ color: #9e9e9e; }
+.amp-loop-list{ position:relative; border-bottom: 1px solid #ededed; padding: 25px 15px 25px 15px }
+body .amp-loop-list-noimg .amp-wp-post-content{ width:100% }
+.amp-loop-list .amp-wp-post-content{ float: left; width: 65%; }
+.amp-loop-list .featured_time{ color:#b3b3b3; padding-left:0 }
+.amp-wp-post-content p{ color: grey; line-height: 1.5; font-size: 14px; margin: 8px 0 10px; font-family:'PT Serif', serif }
+/* Footer */
+#footer{ background: #151515; color: #eee; font-size: 13px; text-align: center; letter-spacing: 0.2px; padding: 35px 0 35px 0; margin-top: 30px; }
+#footer a{ color:#fff }
+#footer p:first-child{ margin-bottom: 12px; }
+#footer .social_icons{ margin: 0px 20px 25px 20px; border-bottom: 1px solid #3c3c3c; padding-bottom: 25px; }
+#footer p{ margin: 0 }
+.back-to-top{padding-bottom: 8px;}
+.rightslink, #footer .rightslink a{ font-size:13px; color:#999 }
+.poweredby{ padding-top:10px; font-size:10px; }
+#footer .poweredby a{ color:#666 }
+.footer_menu ul{ list-style-type: none; padding: 0; text-align: center; margin: 0px 20px 25px 20px; line-height: 27px; font-size: 13px }
+.footer_menu ul li{ display:inline; margin:0 10px; }
+.footer_menu ul li:first-child{ margin-left:0 }
+.footer_menu ul li:last-child{ margin-right:0 }
+.footer_menu ul ul{ display:none }
+/* ADS */
+.amp_ad_1{ margin-top: 15px; margin-bottom: 10px; }
+.single-post .amp_ad_1{ margin-bottom: -15px; }
+.amp-ad-2{ margin-bottom: -5px;    margin-top: 20px; }
+html .single-post .ampforwp-incontent-ad-1 { margin-bottom: 10px; }
+.amp-ad-3{ margin-bottom:10px; }
+.amp-ad-4{ margin-top:2px; }
+.amp-wp-content blockquote{ background-color: #fff; border-left: 3px solid; margin: 0; padding: 15px 20px; background: #f3f3f3; }
+.amp-wp-content blockquote p{ margin-bottom:0 }
+pre{ white-space: pre-wrap; }
+
+#designthree{ background-color: #FFF; overflow: visible;
+/*    animation: closing .3s normal forwards ease-in-out,closingFix .6s normal forwards ease-in-out;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;*/
+}
+/* Sidebar */
+#sidebar[aria-hidden="false"]+#designthree { max-height: 100vh; overflow: hidden; animation: opening .3s normal forwards ease-in-out; -webkit-transform: translate3d(60%, 0, 0) scale(0.8); transform: translate3d(60%, 0, 0) scale(0.8); }
+@keyframes opening{ 0% { transform: translate3d(0, 0, 0) scale(1); } 100% { transform: translate3d(60%, 0, 0) scale(0.8); } }
+@keyframes closing{ 0% { transform: translate3d(60%, 0, 0) scale(0.8); } 100% { transform: translate3d(0, 0, 0) scale(1); } }
+@keyframes closingFix{ 0% { max-height: 100vh; overflow: hidden; } 100% { max-height: none; overflow: visible; } }
+.hamburgermenu{ float:left; position:relative; z-index: 9999; }
+
+/* Category 3 */
+.amp-category-block{ margin: 30px 0px 10px 0px }
+.amp-category-block a{ color:#666}
+.amp-category-block ul{ list-style-type:none}
+.category-widget-gutter h4{ margin-bottom: 0px;}
+.category-widget-gutter ul{ margin-top: 10px; list-style-type:none; padding:0 }
+.amp-category-block-btn{ display: block; text-align: center; font-size: 13px; margin-top: 15px; border-bottom: 1px solid #f1f1f1; text-decoration: none; padding-bottom: 8px;}
+.design_2_wrapper .amp-category-block{ max-width: 840px; margin: 1.5em auto; }
+.amp-category-block ul, .category-widget-wrapper{ max-width: 1000px; margin: 0 auto; padding:0px 15px 5px 15px }
+.amp-category-post{ width: 32%; display: inline-block; word-wrap: break-word;float: left;}
+.amp-category-post amp-img{ margin-bottom:5px; }
+.amp-category-block li:nth-child(3){ margin: 0 1%; }
+.searchmenu{ margin-right: 15px; margin-top: 11px; position: absolute; top: 0; right: 0; }
+.searchmenu button{ background:transparent; border:none }
+.amp-logo amp-img{margin: 0 auto; position:relative;top:9px;max-width:190px;}
+.headerlogo{ margin: 0 auto; width: 80%; text-align: center; }
+.headerlogo a{ color:#F42; display:inline-block}
+
+/*Navigation Menu*/
+.toast { display: block; position: relative; height: 50px; padding-left: 20px; padding-right: 15px; width: 49px; background:none; border:0 }
+.toast:after, .toast:before, .toast span{ position: absolute; display: block; width: 19px; height: 2px; border-radius: 2px; background-color: #F42; -webkit-transform: translate3d(0, 0, 0) rotate(0deg); transform: translate3d(0, 0, 0) rotate(0deg); }
+.toast:after, .toast:before{ content: ''; left: 20px; -webkit-transition: all ease-in .4s; transition: all ease-in .4s; }
+.toast span{ opacity: 1; top: 24px; -webkit-transition: all ease-in-out .4s; transition: all ease-in-out .4s; }
+.toast:before{ top: 17px; }
+.toast:after{ top: 31px; }
+#sidebar[aria-hidden="false"]+#designthree .toast span{ opacity: 0; -webkit-transform: translate3d(200%, 0, 0); transform: translate3d(200%, 0, 0); }
+#sidebar[aria-hidden="false"]+#designthree .toast:before{ -webkit-transform-origin: left bottom; transform-origin: left bottom; -webkit-transform: rotate(43deg); transform: rotate(43deg); }
+#sidebar[aria-hidden="false"]+#designthree .toast:after{ -webkit-transform-origin: left top; transform-origin: left top; -webkit-transform: rotate(-43deg); transform: rotate(-43deg); }
+
+/* CSS3 icon */
+[class*=icono-]{ display: inline-block; vertical-align: middle; position: relative; font-style: normal; color: #f42; text-align: left; text-indent: -9999px; direction: ltr }
+[class*=icono-]:after, [class*=icono-]:before{ content: ''; pointer-events: none; }
+.icono-search{ -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%) }
+.icono-share{ height: 9px; position: relative; width: 9px; color: #dadada; border-radius: 50%; box-shadow: inset 0 0 0 32px, 22px -11px 0 0, 22px 11px 0 0; top: -15px; margin-right: 35px; }
+.icono-share:after, .icono-share:before{ position: absolute; width: 24px; height: 1px; box-shadow: inset 0 0 0 32px; left: 0; }
+.icono-share:before{ top: 0px; -webkit-transform: rotate(-25deg); -ms-transform: rotate(-25deg); transform: rotate(-25deg); }
+.icono-share:after{ top: 8px; -webkit-transform: rotate(25deg); -ms-transform: rotate(25deg); transform: rotate(25deg); }
+.icono-search{ border: 1px solid; width: 10px; height: 10px; border-radius: 50%; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); margin: 4px 4px 8px 8px; }
+.icono-search:before{ position: absolute; left: 50%; -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg); width: 2px; height: 9px; box-shadow: inset 0 0 0 32px; top: 0px; border-radius: 0 0 1px 1px; left: 14px; }
+.closebutton{ background: transparent; border: 0; color: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.7); border-radius: 30px; width: 32px; height: 32px; font-size: 12px; text-align: center; position: absolute; top: 12px; right: 20px; outline:none }
+amp-lightbox{ background: rgba(0, 0, 0,0.85); }
+.searchform label{ color: #f7f7f7; display: block; font-size: 10px; letter-spacing: 0.3px; line-height: 0; opacity:0.6 }
+.searchform{ background: transparent; left: 20%; position: absolute; top: 35%; width: 60%; max-width: 100%; transition-delay: 0.5s; }
+.searchform input{ background: transparent; border: 1px solid #666; color: #f7f7f7; font-size: 14px; font-weight: 400; line-height: 1; letter-spacing: 0.3px; text-transform: capitalize; padding: 20px 0px 20px 30px; margin-top: 15px; width: 100%; }
+#searchsubmit{opacity:0}
+.featured_time{ font-size: 12px; color: #fff; opacity: 0.8; padding-left: 20px; }
+.archives_body main{ margin-top:20px }
+.taxonomy-description p{margin-top: 5px;font-size: 14px;line-height: 1.5;}
+.amp-sub-archives li{width: 50%;} .amp-sub-archives ul{padding: 0;list-style: none;display: flex;font-size: 12px;line-height: 1.2;margin: 5px 0 10px 0px;} .author-img amp-img{border-radius: 50%;margin: 0px 12px 10px 0px;display: block; width:50px;}.author-img{float: left;padding-bottom: 25px;}
+/* AMP carousel */
+.amp-carousel-button-prev, .amp-carousel-button-next{ top:30px;border-radius:60px; }
+.amp-featured-wrapper{ background:#333 }
+.amp-featured-area{ margin: 0 auto; max-width: 450px; max-height: 270px; }
+.amp-carousel-slide h1{ font-size: 30px; font-family: 'PT Serif', serif; margin: 0; font-weight: normal; line-height: 38px; color: #fff; padding: 10px 20px 20px 20px; }
+.amp-featured-area .amp-carousel-slide amp-img:before{ z-index:100; bottom: 0; content: ""; display: block; height: 100%; position:absolute; width: 100%; background: -webkit-gradient(linear, 50% 0%, 50% 75%, color-stop(0%, rgba(0,0,0,0)), color-stop(150%, #000000)) repeat scroll 0 0 rgba(0,0,0,0.2); background: -webkit-linear-gradient(rgba(0,0,0,0),#000000 75%) repeat scroll 0 0 rgba(0,0,0,0); background: -moz-linear-gradient(rgba(0,0,0,0),#000000 75%) repeat scroll 0 0 rgba(0,0,0,0); background: -o-linear-gradient(rgba(0,0,0,0),#000000 75%) repeat scroll 0 0 rgba(0,0,0,0); background: linear-gradient(rgba(0,0,0,0),#000000 75%) repeat scroll 0 0 rgba(0,0,0,0); }
+.featured_title{ position:absolute; z-index:110; bottom:0 }
+.featured_meta{ color:#acacac; font-size:12px; margin:0 15px; }
+.featured_meta_left{ float:left }
+.featured_meta_right{ float:right }
+.archive-heading{padding: 10px 15px 0 15px;}
+/* Responsive */
+@media screen and (min-width: 650px) { table {display: inline-table;}  }
+@media screen and (max-width: 768px){ .amp-wp-meta{ margin:10px 0px 15px 0px } .home-post_image{ width: 40%; } .amp-loop-list .amp-wp-post-content{ width: 58%; } .amp-loop-list .featured_time{line-height:1} .single-post main .amp-wp-content h1{  line-height:1.4;  font-size: 30px;}  }
+@media screen and (max-width: 600px){ .amp-loop-list .amp-wp-tags{display:none} }
+@media screen and (max-width: 530px){ .home-post_image{ width: 35%; } .amp-loop-list .amp-wp-post-content{ width: 63%; } .amp-wp-post-content p { font-size: 12px; } .related_posts ol li p { line-height: 1.6; margin: 7px 0 0 0;} .comments_list ul li .comment-body {width:auto} .amp-category-block li:nth-child(3) {margin:0} }
+@media screen and (max-width: 425px){ .home-post_image{ /*    width: 125px;*/ width: 31.6%; overflow: hidden; /* margin-right: 13px; */ margin-right: 3%; max-height: 122px } .home-post_image amp-img{ width: 144%; left: -20%; } h2.amp-wp-title{    margin-bottom: 7px;  line-height: 1.31578947; font-size: 19px; position:relative;top:-3px } h2.amp-wp-title a{ color:#262626} .amp-loop-list{padding:25px 15px 22px 15px} .amp-loop-list .amp-wp-post-content{ width: 63%; } .amp-loop-list .amp-wp-post-content .large-screen-excerpt-design-3, .related_posts .related_link p{ display:none } .amp-loop-list .amp-wp-post-content .small-screen-excerpt-design-3 { display: block; } .related_posts .related_link a{ font-size: 18px; line-height: 1.7; } .ampforwp-tax-category{ padding-bottom:0 } .amp-wp-byline{ padding:0 } .related_posts .related_link a{ font-size: 17px; line-height: 1.5; } .single-post main .amp-wp-content h1{ line-height: 1.3; font-size: 26px;} .icono-share{display:none} .ampforwp-social-icons amp-social-share{ margin-right: 3px;} main .amp-wp-content{ font-size: 16px; line-height: 26px;} .single-post .amp_author_area .amp_author_area_wrapper{font-size:13px;} .amp-category-post{ font-size:12px; color:#666 } }
+@media screen and (max-width: 400px){ .amp-wp-title{ font-size: 19px; } }
+@media screen and (max-width: 375px){ .single-post main .amp-wp-content h1{ line-height: 1.3; font-size: 24px;} .amp-carousel-slide h1{ font-size: 28px; line-height: 32px; } #pagination .next a, #pagination .prev a{ color: #666; font-size: 14px; padding: 15px 0px; margin-top: -5px; }.related-title,.comments_list h3{ margin-top:15px; } #pagination .next{ margin-bottom:15px; } .related_posts .related_link a{ font-size: 15px; line-height: 1.6; } }
+@media screen and (max-width: 340px){ .single-post main .amp-wp-content h1{ line-height: 1.3; font-size: 22px;} h2.amp-wp-title{ line-height: 1.31578947; font-size: 17px; } .related_posts .related_link a{ font-size: 15px; } .the_content .amp-ad-wrapper{ text-align: center; margin-left: -13px; } }
+@media screen and (max-width: 320px){ .related_posts .related_link a{ font-size: 13px; } .ampforwp-social-icons amp-social-share{ margin-right: 1px; } }
+.entry-content amp-anim{display:table-cell;}
+
+a {  color: #F42F42 }
+body a {  color: #f42f42 }
+
+.amp-wp-content blockquote { border-color:  #000000; }
+amp-user-notification { border-color:  #F42F42;}
+amp-user-notification button { background-color:  #F42F42;}
+.single-post footer { padding-bottom: 41px;}
+.amp-wp-author:before{ content: " Published by  ";}
+.ampforwp-tax-category span:last-child:after { content: ' ';}
+.ampforwp-tax-category span:after{ content: ', ';}
+.amp-wp-article-content img { max-width: 100%;}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/icomoon.eot');
+  src:  url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/icomoon.eot') format('embedded-opentype'),
+    url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/icomoon.ttf') format('truetype'),
+    url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/icomoon.woff') format('woff'),
+    url('../wp-content/plugins/accelerated-mobile-pages/templates/design-manager/design-3/fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"]{ font-family: 'icomoon'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-twitter:before{ content: "\f099";background:#1da1f2 }
+.icon-facebook:before{ content: "\f09a";background:#3b5998 }
+.icon-facebook-f:before{ content: "\f09a";background:#3b5998 }
+.icon-pinterest:before{ content: "\f0d2";background:#bd081c }
+.icon-google-plus:before{ content: "\f0d5";background:#dd4b39 }
+.icon-linkedin:before{ content: "\f0e1";background:#0077b5 }
+.icon-youtube-play:before{ content: "\f16a";background:#cd201f }
+.icon-instagram:before{ content: "\f16d";background:#c13584 }
+.icon-tumblr:before{ content: "\f173";background:#35465c }
+.icon-vk:before{ content: "\f189";background:#45668e }
+.icon-whatsapp:before{ content: "\f232";background:#075e54 }
+.icon-reddit-alien:before{ content: "\f281";background:#ff4500 }
+.icon-snapchat-ghost:before{ content: "\f2ac"; background:#fffc00 }
+.social_icons{ font-size: 15px; display: inline-block; }
+.social_icons ul{ list-style-type:none; padding:0;margin:0; text-align:center }
+.social_icons li{ box-sizing: initial; display:inline-block; margin:5px; }
+.social_icons li:before{ box-sizing: initial; color:#fff; padding: 10px; display: inline-block; border-radius: 70px; width: 18px; height: 18px; line-height: 20px; text-align: center; }
+#ampforwp_search_query_item { display: none; }
+#header, .headerlogo a{ background:#FFFFFF  }
+.comment-button-wrapper a, #pagination .next a, #pagination .prev a{ background: #F42F42 ; }
+.toast:after, .toast:before, .toast span{ background: #333 ; }
+[class*=icono-], .headerlogo a{ color: #333 }
+#pagination .next a, #pagination .prev a , #pagination .next a, #pagination .prev a , .comment-button-wrapper a{ color:  #fff ;}
+ 
+.amp-menu > li > a > amp-img, .sub-menu > li > a > amp-img { display: inline-block; margin-right: 4px; }
+.menu-item amp-img {width: 16px; height: 11px; display: inline-block; margin-right: 5px; }
+.amp-carousel-container {position: relative;width: 100%;height: 100%;} 
+.amp-carousel-img img {object-fit: contain;}
+.amp-ad-wrapper span { display: inherit; font-size: 12px; line-height: 1;}
+/******* Paste your Custom CSS in this Editor *******/
+
+.amp-home-body, .amp-wp-content.the_content,
+.single-post main,
+.amp-wp-article-content h1, 
+.single-post main .amp-wp-article-content h2, 
+.single-post main .amp-wp-article-content h3, 
+.single-post main .amp-wp-article-content h4, 
+.single-post main .amp-wp-article-content h5, 
+.single-post main .amp-wp-article-content h6,
+.related_posts .related_link a,
+.single-post main, .related-title, 
+.single-post .comments_list h3
+{
+    font-family: "proxima_nova_regular", "Helvetica", san-serif;
+}
+
+.single-post main .amp-wp-content h1 {
+    line-height: 1.1;
+}
+
+.amp-carousel-slide h1 {
+    font-family: "proxima_nova_regular", "Helvetica", san-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/*********************
+* Header Logo
+**********************/
+.headerlogo .amp-logo h1 a {
+    visibility: hidden;
+}
+
+.headerlogo .amp-logo h1 a::before {
+    content: "Tony Robbins";
+    display: block;
+    visibility: visible;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.navigation_heading {
+    padding: 0;
+    visibility: hidden;
+}
+
+.navigation_heading::before {
+    padding: 20px 20px 15px 20px;
+    content: "Menu";
+    display: inline-block;
+    visibility: visible;
+    border-bottom: 1px solid #555555;
+    width: 100%;
+}
+
+.toggle-navigationv2 ul {
+    margin: 0;
+}
+
+.featured_time {
+    display: none;
+}
+
+/*********************
+* Navigation Menu
+**********************/
+.toggle-navigationv2 ul li a {
+    font-family: "proxima_nova_regular", "Helvetica", san-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.toggle-navigationv2 ul li a:hover{
+        background: transparent;
+        color: #14aecf;
+}
+
+/*********************
+* Blog Roll Category Titles
+**********************/
+
+.amp-loop-list .amp-wp-tags li {
+    padding: 0;
+    background: transparent;
+    font-family: "Georgia", serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #000000;
+} 
+
+/* 
+* Default 
+* Black
+*/
+.amp-loop-list .amp-wp-tags li a {
+    color: #000000;
+}
+
+.amp-loop-list .amp-wp-tags li::after {
+    margin: 5px 0 0 0;
+    height: 4px;
+    background: #000000;
+    width: 40px;
+    content: '';
+    display: block;
+}
+
+/* 
+* Health & Vitality
+* Orange
+*/
+.amp-loop-list .amp-wp-tags li.amp-cat-87 a {
+    color: #FAA41B;
+}
+
+.amp-loop-list .amp-wp-tags li.amp-cat-87::after {
+    background: #FAA41B;
+}
+
+/* 
+* Leadership & Impact
+* Purple
+*/
+.amp-loop-list .amp-wp-tags li.amp-cat-91 a {
+    color: #6D166D;
+}
+
+.amp-loop-list .amp-wp-tags li.amp-cat-91::after {
+    background: #6D166D;
+}   
+
+/* 
+* Mind & Meaning
+* Pink
+*/
+.amp-loop-list .amp-wp-tags li.amp-cat-93 a {
+    color: #AA2173;
+}
+
+.amp-loop-list .amp-wp-tags li.amp-cat-93::after {
+    background: #AA2173;
+}
+
+/* 
+* Productivity & Performance
+* Teal
+*/
+.amp-loop-list .amp-wp-tags li.amp-cat-90 a {
+    color: #00979F;
+}
+
+.amp-loop-list .amp-wp-tags li.amp-cat-90::after {
+    background: #00979f;
+}
+
+/* 
+* Love & Relationships
+* Red/Orange
+*/
+.amp-loop-list .amp-wp-tags li.amp-cat-88 a {
+    color: #F73913;
+}
+
+.amp-loop-list .amp-wp-tags li.amp-cat-88::after {
+    background: #F73913;
+}
+
+/* 
+* Wealth & Lifestyle
+* Green
+*/
+.amp-loop-list .amp-wp-tags li.amp-cat-92 a {
+    color: #9ECB3D;
+}
+
+.amp-loop-list .amp-wp-tags li.amp-cat-92::after {
+    background: #9ECB3D;
+}
+
+/* 
+* Career & Business
+* Dark Blue
+*/
+.amp-loop-list .amp-wp-tags li.amp-cat-89 a {
+    color: #1D3464;
+}
+
+.amp-loop-list .amp-wp-tags li.amp-cat-89::after {
+    background: #1D3464;
+}
+
+/*
+* Read Now link
+*/
+.amp-wp-post-content a.read-more {
+    color: #999999;
+    text-transform: uppercase;
+    font-family: "proxima_nova_regular", "Helvetica", san-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: .5px;    
+}
+
+@media screen and (max-width: 600px) { 
+    .amp-loop-list .amp-wp-tags {
+        display: block;
+    } 
+}
+
+@media screen and (max-width: 425px) { 
+    .amp-wp-post-content a.read-more {
+        margin: -15px 0;
+        display: block;
+    }
+}    
+
+/*********************
+* Blog Post Titles
+**********************/
+h1.amp-wp-title, h2.amp-wp-title {
+    font-family: "proxima_nova_regular", "Helvetica", san-serif;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 425px) {
+
+    .amp-loop-list .amp-wp-tags {
+        margin: 0 0 10px 0;
+        line-height: normal;
+    }
+
+    h2.amp-wp-title {
+        font-size: 15px;
+        margin-bottom: 0;
+        line-height: normal;
+        top: -15px;
+    }
+    
+    .home-post_image {
+        width: 40%;
+    }
+    
+    .amp-loop-list .amp-wp-post-content {
+        width: 54.6%;
+    }
+    
+}
+
+/*********************
+* Blog Excerpts
+**********************/
+.large-screen-excerpt-design-3 {
+    display: none;
+}
+
+.amp-loop-list .featured_time {
+    display: none;   
+}
+
+/*********************
+* Search Lightbox Overlay
+**********************/
+
+amp-lightbox {
+    background: rgba(20,174,207,0.85);
+}
+
+ form#searchform input {
+    border: 1px solid #ffffff;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #ffffff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ffffff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ffffff;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #ffffff;
+  opacity: 1;
+}
+
+
+/*********************
+* Individual Blog Posts
+**********************/
+
+.amp-wp-content.breadcrumb,
+.amp-wp-author {
+    display: none;
+}
+
+.ampforwp-tax-category span.amp-in {
+    display: none;
+}
+
+.ampforwp-tax-category span {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #777777;
+}
+
+.ampforwp-tax-category span::after {
+    display: none;   
+}
+
+
+.amp-wp-meta span[class^="amp-cat-"] a {
+    color: #555555;
+    font-size: 20px;
+}
+
+/*
+* Default Black
+*/
+.amp-wp-meta span[class^="amp-cat-"]::after {
+    margin: 5px 0 0 0;
+    height: 4px;
+    background: #000000;
+    width: 40px;
+    content: '';
+    display: block;  
+}
+
+/* 
+* Health & Vitality
+* Orange
+*/
+.amp-wp-meta span.amp-cat-87::after {
+    background: #FAA41B;
+}
+
+/* 
+* Leadership & Impact
+* Purple
+*/
+.amp-wp-meta span.amp-cat-91::after {
+    background: #6D166D;
+}
+
+/* 
+* Mind & Meaning
+* Pink
+*/
+.amp-wp-meta span.amp-cat-93::after {
+    background: #AA2173;
+}
+
+/* 
+* Productivity & Performance
+* Teal
+*/
+.amp-wp-meta span.amp-cat-90::after {
+    background: #00979F;
+}
+
+/* 
+* Love & Relationships
+* Red/Orange
+*/
+.amp-wp-meta span.amp-cat-88::after {
+    background: #F73913;
+}
+
+/* 
+* Wealth & Lifestyle
+* Green
+*/
+.amp-wp-meta span.amp-cat-92::after {
+    background: #9ECB3D;
+}
+
+/* 
+* Career & Business
+* Dark Blue
+*/
+.amp-wp-meta span.amp-cat-89::after {
+    background: #1D3464;
+}
+
+/*********************
+* Archive 
+**********************/
+
+.archive-heading {
+    font-family: "Georgia", serif;
+    font-style: italic;    
+}		/* Add your custom css here */
+    .opt-in-ad-container {
+        max-width:360px;
+    }
+	.opt-in-ad-container.mobile-hide{
+        display:none;
+    }
+	    .amp-logo amp-img{width:0px}
+ 	</style>
+</head>
+
+<body class="body  amp_home_body design_3_wrapper" >
+<amp-sidebar id='sidebar'
+    layout="nodisplay"
+    side="left">
+        <div class="toggle-navigationv2">
+      <div role="button" tabindex="0" on="tap:sidebar.close" class="close-nav">X</div>
+              <div class="navigation_heading">Navigate</div>
+
+            <nav id ="primary-amp-menu" itemscope="" itemtype="https://schema.org/SiteNavigationElement"> 
+<div class="menu-amp-category-menu-container"><ul id="menu-amp-category-menu" class="amp-menu"><li id="menu-item-33601" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33601"><a href="../career-business/amp/index.html" itemprop="url"><span itemprop="name">Career &amp; Business</span></a></li>
+<li id="menu-item-33589" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33589"><a href="../health-vitality/amp/index.html" itemprop="url"><span itemprop="name">Health &amp; Vitality</span></a></li>
+<li id="menu-item-33590" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33590"><a href="../leadership-impact/amp/index.html" itemprop="url"><span itemprop="name">Leadership &amp; Impact</span></a></li>
+<li id="menu-item-33591" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33591"><a href="../love-relationships/amp/index.html" itemprop="url"><span itemprop="name">Love &amp; Relationships</span></a></li>
+<li id="menu-item-33592" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33592"><a href="../mind-meaning/amp/index.html" itemprop="url"><span itemprop="name">Mind &amp; Meaning</span></a></li>
+<li id="menu-item-33593" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33593"><a href="../productivity-performance/amp/index.html" itemprop="url"><span itemprop="name">Productivity &amp; Performance</span></a></li>
+<li id="menu-item-33594" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33594"><a href="../wealth-lifestyle/amp/index.html" itemprop="url"><span itemprop="name">Wealth &amp; Lifestyle</span></a></li>
+</ul></div>
+
+      </nav>
+                <div class="social_icons">
+            <ul>
+
+                                                      <a href="#" target ="_blank"><li class="icon-twitter"></li></a>
+                            
+                                                        <a href="#" target ="_blank"><li class="icon-facebook"></li></a>
+                            
+                                                        <a href="#" target ="_blank"><li class="icon-pinterest"></li></a>
+                            
+                            
+                            
+                                                        <a href="#" target ="_blank"><li class="icon-youtube-play"></li></a>
+                            
+                            
+                            
+                            
+
+                            
+                            
+            </ul>
+          </div>
+  </div>
+</amp-sidebar>
+<div id="designthree" class="designthree main_container">
+<header class="container">
+  <div id="headerwrap">
+      <div id="header">
+              <div class="hamburgermenu">
+            <button class="toast pull-left" on='tap:sidebar.toggle'><span></span></button>
+        </div>
+                <div class="headerlogo">
+                <div class="amp-logo">
+  
+                  <h1><a href="index.html"    >tonyrobbins.com</a></h1>
+         </div>
+         </div>
+                        <div class="searchmenu">
+					<button on="tap:search-icon">
+						<i class="icono-search"></i>
+					</button>
+				</div>
+   
+      </div>
+  </div>
+</header>
+
+<div class="amp-wp-content">
+	</div>
+
+
+		<div class="amp-featured-wrapper">
+		<div class="amp-featured-area">
+		  <amp-carousel width="450"
+		      height="270" layout="responsive"
+		      type="slides" autoplay
+		      delay="4000">
+				      <div>
+					                  <a href="../news/behind-scenes-upw-chicago/amp/index.html">
+                  <div class="featured_title">
+		            <div class="featured_time">1 week ago</div>
+		            <h1>Behind the scenes at UPW Chicago</h1>
+		        </div>
+                  </a>
+		      </div>
+				      <div>
+					                  <a href="../news/stanley-cup-finals-personal-ai/amp/index.html">
+                  <div class="featured_title">
+		            <div class="featured_time">1 month ago</div>
+		            <h1>From a history-making Stanley Cup finals to building a personal AI</h1>
+		        </div>
+                  </a>
+		      </div>
+				      <div>
+												 <amp-img src=../../cdnwp.tonyrobbins.com/wp-content/uploads/2015/06/7040000969_1280x565-550x234.jpg width=450 height=270></amp-img>
+						                  <a href="../health-vitality/break-out-of-your-breakfast-rut/amp/index.html">
+                  <div class="featured_title">
+		            <div class="featured_time">2 months ago</div>
+		            <h1>Break out of your breakfast rut</h1>
+		        </div>
+                  </a>
+		      </div>
+				      <div>
+												 <amp-img src=../../cdnwp.tonyrobbins.com/wp-content/uploads/2015/06/7040001086_1280x565-550x234.jpg width=450 height=270></amp-img>
+						                  <a href="../career-business/the-power-of-leverage/amp/index.html">
+                  <div class="featured_title">
+		            <div class="featured_time">2 months ago</div>
+		            <h1>The power of leverage</h1>
+		        </div>
+                  </a>
+		      </div>
+				  </amp-carousel>
+		</div>
+		</div>
+<main>
+			
+		<div class="amp-wp-content amp-loop-list amp-loop-list-noimg">
+			
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-492"><a href="../news/amp/index.html" >News</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../news/behind-scenes-upw-chicago/amp/index.html"> Behind the scenes at UPW Chicago</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				The past few weeks have been a whirlwind of activity for Tony, but the biggest&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../news/behind-scenes-upw-chicago/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">1 week ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list amp-loop-list-noimg">
+			
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-492"><a href="../news/amp/index.html" >News</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../news/stanley-cup-finals-personal-ai/amp/index.html"> From a history-making Stanley Cup finals to building a personal AI</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				Where has Tony been recently – and what in the world is he up to?&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../news/stanley-cup-finals-personal-ai/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">1 month ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list ">
+								<div class="home-post_image">
+						<a href="../health-vitality/break-out-of-your-breakfast-rut/amp/index.html">
+							<amp-img
+								layout="responsive"
+								src=../../cdnwp.tonyrobbins.com/wp-content/uploads/2015/06/7040000969_1280x565-550x234.jpg																width=550								height=234							></amp-img>
+						</a>
+					</div>
+				
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-87"><a href="../health-vitality/amp/index.html" >Health &amp; Vitality</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../health-vitality/break-out-of-your-breakfast-rut/amp/index.html"> Break out of your breakfast rut</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				It’s time to break out of your breakfast bubble. Cereal, bagels, bacon, toast and jam&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../health-vitality/break-out-of-your-breakfast-rut/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">2 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list ">
+								<div class="home-post_image">
+						<a href="../career-business/the-power-of-leverage/amp/index.html">
+							<amp-img
+								layout="responsive"
+								src=../../cdnwp.tonyrobbins.com/wp-content/uploads/2015/06/7040001086_1280x565-550x234.jpg																width=550								height=234							></amp-img>
+						</a>
+					</div>
+				
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-89"><a href="../career-business/amp/index.html" >Career &amp; Business</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../career-business/the-power-of-leverage/amp/index.html"> The power of leverage</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				The simple concept of “leverage” has the power to get you more time, better fitness,&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../career-business/the-power-of-leverage/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">2 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list amp-loop-list-noimg">
+			
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-492"><a href="../news/amp/index.html" >News</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../news/from-vatican-city-to-the-nba-finals/amp/index.html"> From Vatican City to the NBA Finals</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				Where has Tony been recently – and what in the world is he up to?&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../news/from-vatican-city-to-the-nba-finals/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">2 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list ">
+								<div class="home-post_image">
+						<a href="../productivity-performance/time-sucks/amp/index.html">
+							<amp-img
+								layout="responsive"
+								src=../../cdnwp.tonyrobbins.com/wp-content/uploads/2015/06/7040001110_1280x565-550x234.jpg																width=550								height=234							></amp-img>
+						</a>
+					</div>
+				
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-90"><a href="../productivity-performance/amp/index.html" >Productivity &amp; Performance</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../productivity-performance/time-sucks/amp/index.html"> The 10 biggest time-sucks</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				Time: It’s the one thing that keeps on rolling, no matter what we do. And&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../productivity-performance/time-sucks/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">2 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list amp-loop-list-noimg">
+			
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-89"><a href="../career-business/amp/index.html" >Career &amp; Business</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../career-business/hunger-will-destroy-your-fear-of-failure/amp/index.html"> Hunger will destroy your fear of failure</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				Dear 2018 Graduates, You and I have certainly grown up in very different environments, and&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../career-business/hunger-will-destroy-your-fear-of-failure/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">3 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list ">
+								<div class="home-post_image">
+						<a href="../mind-meaning/the-power-of-deep-listening/amp/index.html">
+							<amp-img
+								layout="responsive"
+								src=../../cdnwp.tonyrobbins.com/wp-content/uploads/2015/06/7040001192_1280x565-550x235.jpg																width=550								height=235							></amp-img>
+						</a>
+					</div>
+				
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-93"><a href="../mind-meaning/amp/index.html" >Mind &amp; Meaning</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../mind-meaning/the-power-of-deep-listening/amp/index.html"> The power of deep listening</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				Have you ever spoken to someone who made you feel like you were the only&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../mind-meaning/the-power-of-deep-listening/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">4 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list amp-loop-list-noimg">
+			
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-91"><a href="../leadership-impact/amp/index.html" >Leadership &amp; Impact</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../leadership-impact/sustainable-giving-better-living/amp/index.html"> Sustainable giving for better living</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				The secret to living is giving, but what are the best ways to give? Maybe&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../leadership-impact/sustainable-giving-better-living/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">4 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+		<div class="amp-wp-content amp-loop-list amp-loop-list-noimg">
+			
+			<div class="amp-wp-post-content">
+                <ul class="amp-wp-tags">
+											<li class="amp-cat-93"><a href="../mind-meaning/amp/index.html" >Mind &amp; Meaning</a></li>
+					                </ul>
+				<h2 class="amp-wp-title"><a href="../mind-meaning/let-go-past/amp/index.html"> How to let go of the past</a></h2>
+
+
+						        <p class="large-screen-excerpt-design-3">
+				Why do we hold on to the past? Why is it so difficult to let&hellip; </p>
+		        <p class="small-screen-excerpt-design-3"> 				</p>
+		        								<p><a class="read-more" href="../mind-meaning/let-go-past/amp/index.html">Read Now</a></p>
+
+                <div class="featured_time">4 months ago</div>
+		    </div>
+            <div class="cb"></div>
+	</div>
+
+	
+	<div class="amp-wp-content pagination-holder">
+
+		<div id="pagination">
+			<div class="next"><a href="page/2/index.html" >Show more Posts &raquo;</a></div>
+								<div class="clearfix"></div>
+		</div>
+	</div>
+
+		
+	
+</main>
+  <footer class="footer_wrapper container">
+      <div id="footer">      
+        
+                  <div class="social_icons">
+            <ul>
+
+                          <a href="#" target ="_blank"><li class="icon-twitter"></li></a>
+              
+                            <a href="#" target ="_blank"><li class="icon-facebook"></li></a>
+              
+                            <a href="#" target ="_blank"><li class="icon-pinterest"></li></a>
+              
+              
+              
+                            <a href="#" target ="_blank"><li class="icon-youtube-play"></li></a>
+              
+              
+              
+              
+              
+              
+            </ul>
+          </div>
+                    <p class="rightslink">
+            All Rights Reserved |  <a class="view-non-amp" href="../index.html" >View Non-AMP Version </a>           </p>
+          
+                      <p class="poweredby">
+                <a href="https://ampforwp.com/" rel="nofollow">Powered by AMPforWP</a>
+            </p>
+                </div>
+  </footer>
+</div><!--Design3 Ends-->
+		<!--Plugin Version :0.9.96 -->
+	
+						<amp-lightbox id="search-icon" layout="nodisplay">
+						    <form role="search" method="get" id="searchform" class="searchform" target="_top" action="https://www.tonyrobbins.com/">
+<div>
+<label class="screen-reader-text" for="s"></label>
+<input type="text" placeholder="AMP" value="1" name="amp" class="hide" id="ampforwp_search_query_item" />
+<input type="text" placeholder="Type Here" value="" name="s" id="s" />
+<input type="submit" id="searchsubmit" value="Search" />
+</div>
+</form>						    <button on="tap:search-icon.close" class="closebutton">X</button>
+						    <i class="icono-cross"></i>
+						</amp-lightbox>
+	<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.tonyrobbins.com\/","publisher":{"@type":"Organization","name":"tonyrobbins.com","logo":{"@type":"ImageObject","url":"","height":"60","width":"600"}},"headline":"tonyrobbins.com | The official website of Tony Robbins","datePublished":"2018-08-03 16:48:32","dateModified":"2018-08-03 16:48:34","author":{"@type":"Person","name":"Team Tony"},"image":{"@type":"ImageObject","url":"","height":550,"width":700},"description":""}</script>
+							<amp-analytics data-block-on-consent type="googleanalytics" id="analytics1">
+							<script type="application/json">
+								{"vars":{"account":"UA-XXXXX-Y"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}							</script>
+						</amp-analytics>
+						<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a1b2338962","applicationID":"35524778","transactionName":"MgBabBNQDUsAAEEPWwtKbUoIHgpWBQZNSEQNFQ==","queueTime":0,"applicationTime":9,"atts":"HkdZGltKHkU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from www.tonyrobbins.com/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Aug 2018 11:40:08 GMT -->
+</html>
